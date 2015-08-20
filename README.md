@@ -6,7 +6,7 @@ Unbound.conf include file to unblock domains
 Danish authorities have started to seize domains in the dk. zone.
 
 We object to this, and since they did it in a naive way, we want to have
-fun, and you are welcome to join us.
+fun, and you are welcome to join us - send pull request or fork.
 
 
 # Installation
@@ -47,6 +47,7 @@ include: "/etc/unbound-unblock/unblocked.conf"
 Try lookup of a "blocked name", like:
 
 Mac
+```
 $ host popcorntime.dk 127.0.0.1
 Using domain server:
 Name: 127.0.0.1
@@ -54,11 +55,15 @@ Address: 127.0.0.1#53
 Aliases:
 
 popcorntime.dk has address 77.66.80.49
+```
 
 Windows
-nslookup
+```
+nslookup something something
+```
 
 also make sure to look up a name from the same zone, which is not blocked like:
+```
 $ host www.dr.dk 127.0.0.1
 Using domain server:
 Name: 127.0.0.1
@@ -67,7 +72,7 @@ Aliases:
 
 www.dr.dk is an alias for www.gss.dr.dk.
 www.gss.dr.dk has address 159.20.6.6
-
+```
 
 # How does it work
 
@@ -79,9 +84,11 @@ has records for things that have been removed from a zone/domain like dk.
 
 The first record to be added to this was,
 
+```
 # Danish blocked domains
     local-zone: "dk" transparent
     local-data: "popcorntime.dk.                  IN A 77.66.80.49"
+```
 
 This makes Unbound work for all existing records - names - but for the specific
 domain/name popcorntime.dk it will respond with the IP.
