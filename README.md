@@ -42,6 +42,20 @@ then add the following statement to */etc/unbound/unbound.conf*
 include: "/etc/unbound-unblock/unblocked.conf"
 ```
 
+# Updating
+
+Just do a git pull,
+```
+$ cd /etc/unbound-unblock/
+$ git pull
+Already up-to-date.
+$ unbound-checkconf
+unbound-checkconf: no errors in /etc/unbound/unbound.conf
+```
+
+If there are no errors, you can ask Dnssec-Trigger to quit with the menu
+and it will restart automatically.
+
 # Checking
 
 Try lookup of a "blocked name", like:
@@ -72,6 +86,11 @@ Aliases:
 
 www.dr.dk is an alias for www.gss.dr.dk.
 www.gss.dr.dk has address 159.20.6.6
+```
+If you have problems you can check the configuration like this:
+```
+kunoichi:unbound-unblock root# unbound-checkconf
+unbound-checkconf: no errors in /etc/unbound/unbound.conf
 ```
 
 # How does it work
