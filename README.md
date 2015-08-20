@@ -22,7 +22,7 @@ Procedure consist of
 
 First get the repo and files
 
-'''
+```
 $ git clone git@github.com:kramshoej/unbound-unblock.git
 Cloning into 'unbound-unblock'...
 remote: Counting objects: 4, done.
@@ -30,17 +30,17 @@ remote: Compressing objects: 100% (4/4), done.
 remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (4/4), done.
 Checking connectivity... done.
-'''
+```
 
 Then move into a specific place
-'''
+```
 $ sudo mv unbound-unblock /etc
-'''
+```
 
 then add the following statement to */etc/unbound/unbound.conf*
-'''
+```
 include: "/etc/unbound-unblock/unblocked.conf"
-'''
+```
 
 # Checking
 
