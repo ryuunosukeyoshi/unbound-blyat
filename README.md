@@ -3,10 +3,7 @@ Unbound.conf include file to unblock domains
 
 # Why
 
-Danish authorities have started to seize domains in the dk. zone.
-
-We object to this, and since they did it in a naive way, we want to have
-fun, and you are welcome to join us - send pull request or fork.
+NoU.
 
 
 # Installation
@@ -23,7 +20,7 @@ Procedure consist of
 First get the repo and files
 
 ```
-$ git clone git@github.com:kramshoej/unbound-unblock.git
+$ git clone https://github.com/ryuunosukeyoshi/unbound-unblock.git
 Cloning into 'unbound-unblock'...
 remote: Counting objects: 4, done.
 remote: Compressing objects: 100% (4/4), done.
